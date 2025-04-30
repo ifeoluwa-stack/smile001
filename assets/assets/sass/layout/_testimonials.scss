@@ -1,0 +1,43 @@
+.testimonial-sec {
+    .testimonial-block {
+        margin: 0 12px;
+        margin-bottom: 24px;
+        width: clamp(364px, 24.063vw, 916px) !important;
+        padding: clamp(24px, 1.667vw, 116px) clamp(18px, 1.25vw, 106px);
+        border-radius: $br-12;
+        background-color: $lightest-gray;
+        box-shadow: 0px 0px 17px 0px rgba(209, 209, 209, 0.31);
+        transition: $transition;
+
+        .clamp-text {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .block-user-img {
+            width: clamp(48px, 3.333vw, 160px);
+            height: clamp(48px, 3.333vw, 160px);
+            border-radius: 50%;
+        }
+
+        .quote-vec {
+            width: clamp(48px, 4.167vw, 190px);
+        }
+
+        .medium-black {
+            transition: $transition;
+        }
+
+        &:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15),
+                0 4px 10px rgba(0, 0, 0, 0.1);
+
+            .medium-black {
+                color: $accent-1 !important;
+            }
+        }
+    }
+}

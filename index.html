@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="index.html">
+</head>
+<body>
+    
+ <div class="maincontainer">
+
+<div class="leftobj" style="margin-left: 10%;">
+    <div class="logo">
+        <image src="assets/media/logo.png" mode="" style="width:20%; height: 15%; ">
+            <h1  class="logotext" >
+                FLARE <span style="color:#456B61 ; font-weight:700 ; margin-right: 30px; "> CRAFT</span>
+            </h1>
+    </div>
+    <div class="logincontainer" style="width: 50%; ">
+        <form action="" class="loginform">
+            <h1 style="font-weight: bolder; color: #456B61; ">
+           Login
+            </h1>
+            <h3 style=" color: gray;"> Email</h3>
+            <input class="input" type="email" id="email" name="email" required placeholder="Enter your email">
+            <h3 style="color: gray;">
+                password
+            </h3>
+        <input class="input" type="password" placeholder="input password" required >
+        </form>
+    </div>
+    <div class="checkbox-container">
+        <label for="rememberMe">
+          <input  type="checkbox" id="rememberMe" /> Remember me
+        </label> 
+        <h2 ><a href="" style="text-decoration: none; color:#456B61 ; font-weight:bold ;" >forget password</a></h2>
+      </div><script src="middleware.js"></script>  <!-- External JS file linked here -->
+
+      <script>
+          document.getElementById("loginForm").addEventListener("submit", function(event) {
+              event.preventDefault();
+              if (validateLoginForm()) {
+                  alert("Form submitted successfully.");
+              }
+          });
+  
+          // Run authentication check on page load
+          checkAuthentication();
+      </script>
+
+      <button  class="bt" style=" "><a href="homepage.html" style="text-decoration: none; color: white; ">LOG IN</a></button>
+</div>
+
+<div class="rightobj" style="width: 10%;width: 10%; width: 50%; ">
+    <image src="images/img3.jpg" mode="" style="border-radius: 15%; width: 90%; margin: 5%;">
+</div>
+    </div>
+    <div style=" margin-left: 15%; font-weight: bolder; " >
+     <span style="color: rgb(110, 107, 107);">
+        Don't have an account <a href="" style="color: #456B61; ">SIGN UP</a>
+     </span>
+       
+    </div>
+    <script>
+        function validateEmail() {
+          const email = document.getElementById('email').value;
+          const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!regex.test(email)) {
+            alert("Please enter a valid email address.");
+            return false; // Prevent form submission if invalid
+          }
+          return true; // Allow form submission if valid
+        }
+      </script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+.brand-slider-wrapper {
+
+    .brand-slider {
+        .brand-image {
+            img {
+                @media (min-width: 2099px) {
+                    transform: scale(1.4);
+                }
+
+                @media (min-width: 3299px) {
+                    transform: scale(2);
+                }
+            }
+        }
+    }
+}
+
+.why-choose-sec {
+    .why-choose-block {
+        padding: clamp(18px, 1.25vw, 96px);
+        border-radius: $br-12;
+        background: $lightest-gray;
+        box-shadow: 0px 0px 17px 0px rgba(209, 209, 209, 0.31);
+        transition: $transition;
+
+        .icon {
+            width: clamp(40px, 3.333vw, 160px);
+            height: clamp(40px, 3.333vw, 160px);
+            border-radius: 50%;
+            background-color: $accent-1;
+            transition: $transition;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                transition: $transition;
+                width: clamp(28px, 1.979vw, 124px);
+                height: clamp(28px, 1.979vw, 124px);
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15),
+                0 4px 10px rgba(0, 0, 0, 0.1);
+
+            .icon {
+                background-color: $medium-black;
+            }
+        }
+    }
+}
