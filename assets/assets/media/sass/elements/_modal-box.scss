@@ -1,0 +1,97 @@
+.modal {
+    &.show {
+        display: grid !important;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .cus-btn {
+        color: #FFF;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: clamp(12px, 0.845vw, 32px) clamp(24px, 1.667vw, 64px);
+        font-size: clamp(14px, 0.833vw, 48px);
+        font-weight: 500;
+        border-radius: clamp(4px, 0.417vw, 36px);
+        cursor: pointer;
+        background: #0C0C0D;
+        position: relative;
+        overflow: hidden;
+        z-index: 10;
+        transition: all 0.5s ease-in-out;
+        border: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-dialog {
+        max-width: 70%;
+
+        @include media-query(1024px) {
+            max-width: 90%;
+        }
+
+        @include media-query(575px) {
+            width: auto;
+        }
+
+        @include media-query(490px) {
+            max-width: 100%;
+        }
+
+        &.compare-dialog {
+            @include media-query(1024px) {
+                overflow: hidden;
+                max-width: 100% !important;
+            }
+        }
+
+        .modal-content {
+            background: transparent;
+            border: 0;
+
+            .modal-body {
+                .detail-wrapper {
+                    background-color: $white;
+                    padding: 12px;
+                    border-radius: $br-24;
+
+                    .quick-image-box {
+                        border-radius: $br-20;
+                        background-color: $accent-2;
+                        text-align: center;
+                        height: 100%;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        padding: clamp(16px, 1.667vw, 48px);
+
+                        img {
+                            width: 28.75vw;
+
+                            @include media-query(490px) {
+                                width: 48.98vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .product-text-container {
+            border-radius: $br-20;
+            background-color: $accent-2;
+            padding: clamp(16px, 1.25vw, 40px);
+
+            .decrement , .increment{
+                background-color: $white;
+
+                &:hover  {
+                    background-color: $accent-1;
+                }
+            }
+        }
+    }
+}

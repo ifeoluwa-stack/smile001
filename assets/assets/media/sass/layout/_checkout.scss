@@ -1,0 +1,271 @@
+.customer-container {
+    .customer-wrapper {
+        background-color: $lightest-gray;
+        border-top: 1px solid $accent-1;
+        border-radius: $br-8;
+        padding: clamp(16px, 1.25vw, 32px);
+
+        .sign-form {
+            display: none;
+        }
+
+        .cus-btn {
+            color: #FFF;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: clamp(12px, 0.845vw, 32px) clamp(24px, 1.667vw, 64px);
+            font-size: clamp(14px, 0.833vw, 48px);
+            font-weight: 500;
+            border-radius: $br-48;
+            cursor: pointer;
+            background: #0C0C0D;
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+            transition: all 0.5s ease-in-out;
+            border: 0;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                top: 0;
+                left: -40px;
+                transform: skewX(45deg);
+                background-color: $accent-1;
+                transition: all 0.5s ease-in-out;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: #FFF;
+
+                &::before {
+                    width: 160%;
+                }
+            }
+
+            &.btn-sec {
+                background: #45474F;
+            }
+        }
+
+    }
+}
+
+.sign-submit-btn {
+    width: 25%;
+
+    @include media-query(490px) {
+        width: 100%;
+    }
+}
+
+.billing-detail {
+    .cus-btn {
+        color: #FFF;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: clamp(12px, 0.845vw, 32px) clamp(24px, 1.667vw, 64px);
+        font-size: clamp(14px, 0.833vw, 48px);
+        font-weight: 500;
+        border-radius: $br-48;
+        cursor: pointer;
+        background: #0C0C0D;
+        position: relative;
+        overflow: hidden;
+        z-index: 10;
+        transition: all 0.5s ease-in-out;
+        border: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            top: 0;
+            left: -40px;
+            transform: skewX(45deg);
+            background-color: $accent-1;
+            transition: all 0.5s ease-in-out;
+            z-index: -1;
+        }
+
+        &:hover {
+            color: #FFF;
+
+            &::before {
+                width: 160%;
+            }
+        }
+
+        &.btn-sec {
+            background: #45474F;
+        }
+    }
+    .shipping-radio-container {
+        .plans {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            @include media-query(768px) {
+                flex-wrap: wrap;
+            }
+
+            .plan {
+                cursor: pointer;
+                width: 100%;
+
+                input[type="radio"] {
+                    position: absolute;
+                    opacity: 0;
+                    transition: $transition;
+
+                }
+
+                .plan-content {
+                    display: flex;
+                    gap: 16px;
+                    padding: 16px 60px 16px 16px;
+                    height: 120px;
+                    border: 1px solid $light-gray;
+                    border-radius: 10px;
+                    position: relative;
+                    align-items: center;
+
+                    img {
+                        @include media-query(490px) {
+                            width: 30%;
+                        }
+                    }
+
+                    &.content-2 {
+                        height: 80px;
+
+                    }
+
+                    .plan-details {
+                        display: inline-block;
+                        width: 100%;
+                    }
+                }
+
+                input[type="radio"] {
+                    &+.plan-content {
+                        -webkit-transition: ease-in 0.3s;
+                        -o-transition: ease-in 0.3s;
+                        transition: ease-in 0.3s;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            height: 24px;
+                            width: 24px;
+                            right: 20px;
+                            top: 20px;
+                            border-radius: 100%;
+                            border: 3px solid #fff;
+                            -webkit-box-shadow: 0px 0px 0px 2px $accent-1;
+                            box-shadow: 0px 0px 0px 2px $accent-1;
+                            transform: translate(-50%);
+                            top: 46px;
+                            right: 10px;
+                        }
+                    }
+                }
+
+                input[type="radio"]:checked {
+                    &+.plan-content {
+                        -webkit-transition: ease-in 0.3s;
+                        -o-transition: ease-in 0.3s;
+                        transition: ease-in 0.3s;
+
+                        &:after {
+                            content: "";
+                            background: $accent-1;
+                            border-radius: 100%;
+                            border: 5px solid #fff;
+                            -webkit-box-shadow: 0px 0px 0px 2px $accent-1;
+                            box-shadow: 0px 0px 0px 2px $accent-1;
+                        }
+                    }
+                }
+
+                input[type="radio"] {
+                    &+.content-2 {
+                        -webkit-transition: ease-in 0.3s;
+                        -o-transition: ease-in 0.3s;
+                        transition: ease-in 0.3s;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            height: 24px;
+                            width: 24px;
+                            right: 20px;
+                            top: 20px;
+                            border-radius: 100%;
+                            border: 3px solid #fff;
+                            -webkit-box-shadow: 0px 0px 0px 2px $accent-1;
+                            box-shadow: 0px 0px 0px 2px $accent-1;
+                            transform: translate(-50%);
+                            top: 27px;
+                            right: 10px;
+                        }
+                    }
+                }
+
+                input[type="radio"]:checked {
+                    &+.content-2 {
+                        -webkit-transition: ease-in 0.3s;
+                        -o-transition: ease-in 0.3s;
+                        transition: ease-in 0.3s;
+
+                        &:after {
+                            content: "";
+                            background: $accent-1;
+                            border-radius: 100%;
+                            border: 5px solid #fff;
+                            -webkit-box-shadow: 0px 0px 0px 2px $accent-1;
+                            box-shadow: 0px 0px 0px 2px $accent-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.summary-container {
+    .item-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon-box {
+            width: clamp(52px, 4.167vw, 150px);
+            height: clamp(52px, 4.167vw, 150px);
+            padding: 4px;
+            border-radius: $br-4;
+            background: $accent-2;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .input-block {
+        position: relative;
+
+        button {
+            padding: 8px 12px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(-7%, -50%);
+        }
+    }
+
+}

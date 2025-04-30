@@ -1,0 +1,367 @@
+.feauture-product-sec {
+    overflow: hidden;
+
+    .product-item-1 {
+        width: clamp(292px, 17.448vw, 664px) !important;
+        background-color: $lightest-gray;
+        box-shadow: 0px 0px 17px 0px rgba(209, 209, 209, 0.31);
+        border-radius: $br-24;
+        padding: clamp(12px, 0.833vw, 64px);
+        overflow: hidden;
+
+        @include media-query(1025px) {
+            width: auto !important;
+        }
+
+        .product-color {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            ul {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            // Radio Button
+            input[type=radio] {
+                width: clamp(12px, 0.833vw, 64px);
+                height: clamp(12px, 0.833vw, 64px);
+                -webkit-appearance: none;
+                border-radius: 50%;
+
+                @include media-query(490px) {
+                    width: clamp(16px, 1.042vw, 96px);
+                    height: clamp(16px, 1.042vw, 96px);
+                }
+
+                &.radio-3 {
+                    background-color: #DD3842;
+                }
+
+                &.radio-4 {
+                    background-color: #47C2FF;
+                }
+
+                &.radio-5 {
+                    background-color: #006937;
+                }
+
+                &.radio-6 {
+                    background-color: #FFE603;
+                }
+
+                &.radio-6 {
+                    background-color: #FFE603;
+                }
+            }
+
+            input[type=radio]:checked {
+                border: 3px solid $white;
+                outline: 1px solid $black;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+
+            input[type=radio]:hover {
+                border-radius: 50%;
+                transition: $transition;
+                cursor: pointer;
+                border: 2px solid $white;
+                outline: 1px solid $black;
+            }
+
+        }
+
+        .size-btn-block {
+            display: flex;
+            align-items: center;
+            margin-top: 2px;
+            gap: 8px;
+
+            .size-btn {
+                width: clamp(18px, 1.198vw, 88px);
+                height: clamp(18px, 1.198vw, 88px);
+                padding: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 0.5px solid $light-gray;
+                border-radius: 50%;
+                transition: $transition;
+
+                @include media-query(490px) {
+                    width: 22px;
+                    height: 22px;
+                }
+
+                .subtitle {
+                    color: $light-gray;
+                    transition: $transition;
+                }
+
+                &.active,
+                &:hover {
+                    border: 0.5px solid $medium-black;
+
+                    .subtitle {
+                        color: $medium-black;
+                    }
+                }
+            }
+        }
+
+        .item-img {
+            position: relative;
+            background-color: $accent-2;
+            border-radius: $br-12;
+            padding: 3px;
+            width: 100%;
+            overflow: hidden;
+
+            .sale-label {
+                background-color: $white;
+                padding: 2px clamp(2px, 0.208vw, 28px);
+                position: absolute;
+                top: clamp(10px, 0.833vw, 24px);
+                left: clamp(10px, 0.833vw, 24px);
+                border-radius: 4px;
+                transition: $transition;
+                display: inline-flex;
+                align-items: center;
+                gap: 2px;
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    -webkit-transition: all 0.60s linear 0s;
+                    transition: all 0.60s linear 0s;
+                }
+            }
+
+            .side-icons {
+                ul {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    top: 4px;
+                    z-index: 99;
+                    right: 8px;
+                    gap: 8px;
+                    -webkit-transition: .4s linear;
+                    -moz-transition: .4s linear;
+                    -ms-transition: .4s linear;
+                    -o-transition: .4s linear;
+                    transition: .4s linear;
+
+                    li {
+                        transition: .5s;
+                        opacity: 1;
+                        transform: translateX(80px);
+
+                        a {
+                            width: clamp(24px, 1.667vw, 94px);
+                            height: clamp(24px, 1.667vw, 94px);
+                            display: grid;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: $white;
+                            border-radius: 50%;
+                            transition: $transition;
+                            color: $medium-black;
+
+                            @include media-query(490px) {
+                                width: 28px;
+                                height: 28px;
+                            }
+
+                            svg {
+                                width: clamp(14px, 0.833vw, 78px);
+                                height: clamp(14px, 0.833vw, 78px);
+
+                                path {
+                                    transition: $transition;
+                                }
+                            }
+
+                            &.btn {
+                                font-size: clamp(14px, 0.833vw, 80px);
+                            }
+
+                        }
+
+                        .icon {
+                            display: grid;
+                            justify-content: center;
+                            align-content: center;
+                            border-radius: 50%;
+                            width: clamp(26px, 1.667vw, 94px);
+                            height: clamp(26px, 1.667vw, 94px);
+                            background-color: $white;
+                            transition: $transition;
+
+                            i {
+                                font-size: clamp(14px, 0.833vw, 48px);
+                                color: $medium-black;
+                                transition: $transition;
+                            }
+
+                            &:hover {
+                                background-color: $accent-1;
+                                transition: $transition;
+
+                                i {
+                                    color: $white;
+                                    transition: $transition;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            a {
+                                color: $white;
+                                background: $accent-1;
+
+                                svg {
+                                    path {
+                                        fill: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .product-icon {
+            width: clamp(29px, 2.083vw, 94px);
+            height: clamp(29px, 2.083vw, 94px);
+            background-color: $accent-1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: $transition;
+
+            svg {
+                width: clamp(17px, 1.042vw, 60px);
+                height: clamp(17px, 1.042vw, 60px);
+
+                path {
+                    fill: $white;
+                    transition: $transition;
+                }
+            }
+        }
+
+        &:hover {
+            .item-img {
+                img {
+                    transform: scale(1.06);
+                }
+
+                .side-icons {
+                    ul {
+                        right: 0;
+                        padding: 8px;
+                        transition: $transition;
+                        border-radius: 50%;
+
+                        li {
+
+                            transform: none;
+                            transition: .5s;
+                            transform: translate(0px);
+
+                            &:nth-child(1) {
+                                transition-delay: 0.1s;
+                            }
+
+                            &:nth-child(2) {
+                                transition-delay: 0.2s;
+                            }
+
+                            &:nth-child(3) {
+                                transition-delay: 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .product-icon {
+                background-color: $accent-1;
+
+                svg {
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    @include media-query(766px) {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .view-btn {
+        font-size: clamp(14px, 0.938vw, 86px);
+        font-weight: 600;
+        line-height: 120%;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: $accent-1;
+
+        &:hover {
+            color: $medium-black;
+        }
+    }
+}
+
+.sellar-sec {
+
+    .product-item-1 {
+        width: 100% !important;
+    }
+}
+
+.our-collection {
+    .collection-img {
+        border-radius: $br-24;
+        overflow: hidden;
+        transition: $transition;
+        width: 100%;
+
+        img {
+            border-radius: $br-24;
+            width: 100%;
+            object-fit: cover;
+            transition: $transition;
+        }
+
+        &:hover {
+            img {
+                transform: translateX(8px) scale(1.02);
+            }
+        }
+    }
+}

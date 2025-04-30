@@ -1,0 +1,51 @@
+.error-sec {
+    h1 {
+        font-size: clamp(120px, 20.833vw, 850px);
+        font-weight: 600;
+        line-height: 120%;
+        color: $medium-black !important;
+        text-align: center;
+        letter-spacing: -7.5px;
+    }
+
+    .cus-btn {
+        background-color: $accent-1;
+        border: 1px solid $accent-1;
+
+        .text {
+            color: $white !important;
+        }
+
+        .icon {
+            background-color: $white;
+
+            svg {
+                path {
+                    fill: $medium-black;
+                }
+            }
+        }
+
+        &::before {
+            background-color: $accent-2;
+        }
+
+        &:hover {
+            background-color: $accent-2;
+
+            .text {
+                color: $accent-1 !important;
+            }
+
+            .icon {
+                background-color: $accent-1;
+
+                svg {
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+    }
+}

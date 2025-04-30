@@ -1,0 +1,285 @@
+.back-to-top {
+  position: fixed;
+  bottom: 0px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(130px, 8.021vw, 240px);
+  height: clamp(130px, 8.021vw, 240px);
+  font-size: clamp(44px, 4vw, 116px);
+  border-radius: $br-24;
+  background: $accent-1;
+  color: $white;
+  text-align: center;
+  opacity: 0;
+  text-decoration: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  z-index: 999;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $medium-black;
+    color: $white;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+}
+
+.cus-btn {
+  text-decoration: none;
+  padding: clamp(3px, 0.26vw, 32px);
+  padding-left: clamp(12px, 0.833vw, 64px);
+  cursor: pointer;
+  border-radius: $br-32;
+  background: transparent;
+  border: 1px solid $medium-black;
+  display: inline-flex;
+  align-items: center;
+  gap: $gap-12;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+
+  .text {
+    font-size: clamp(14px, 0.833vw, 48px);
+    font-weight: 600;
+    line-height: 120%;
+    /* 21.6px */
+    color: $medium-black !important;
+    text-transform: uppercase;
+  }
+
+  .icon {
+    width: clamp(28px, 2.302vw, 120px);
+    height: clamp(28px, 2.302vw, 120px);
+    background-color: $medium-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    svg {
+      width: clamp(18px, 1.25vw, 96px);
+      height: clamp(18px, 1.25vw, 96px);
+
+      path {
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: $accent-1;
+    transition: all 0.5s ease-in-out;
+    z-index: -1
+  }
+
+  &:hover {
+    background-color: $accent-1;
+    border: 1px solid $accent-1;
+
+    &::before {
+      width: 160%;
+    }
+
+    .text {
+      color: $white !important;
+    }
+
+    .icon {
+      background-color: $white;
+
+      svg {
+        path {
+          fill: $medium-black;
+        }
+      }
+    }
+  }
+}
+
+
+
+// ===================  SLICK SILDER BUTTONS =================== //
+.slider-arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .arrow-btn {
+    background: $white;
+    border: 1px solid $light-black;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+    padding: 0;
+
+    svg {
+      path {
+        transition: $transition;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $accent-1;
+      transition: $transition;
+      background: $accent-1;
+
+      svg {
+        path {
+          stroke: $white;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}
+
+// ===================  SLICK SILDER BUTTONS =================== // 
+
+// ===================  Quantity BUTTONS =================== //
+.quantity {
+  display: inline-flex;
+  align-items: flex-start;
+  border: 0;
+  border-radius: $br-4;
+  padding: clamp(4px, 0.208vw, 24px) clamp(6px, 0.417vw, 48px);
+  border: 1px solid $black;
+
+  .input-area {
+    display: flex;
+    align-items: center;
+
+    input {
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-size: clamp(16px, 0.938vw, 40px);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      text-align: center;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    .decrement {
+      border-radius: $br-4;
+      border: none;
+      background: $accent-2;
+      width: clamp(28px, 1.667vw, 64px);
+      height: clamp(28px, 1.667vw, 64px);
+      transition: $transition;
+
+      &:hover {
+        color: $white;
+        background: $accent-1;
+      }
+    }
+
+    .increment {
+      border-radius: $br-4;
+      border: none;
+      background: $accent-2;
+      width: clamp(28px, 1.667vw, 64px);
+      height: clamp(28px, 1.667vw, 64px);
+      transition: $transition;
+
+      &:hover {
+        color: $white;
+        background: $accent-1;
+      }
+    }
+  }
+}
+
+// ===================  Quantity BUTTONS =================== // 
+
+// ===================  PAGINATIONS =================== // 
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+
+  #border-pagination {
+    display: flex;
+    gap: 8px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline;
+
+      span {
+        color: $dark-gray;
+        transition: $transition;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $white;
+        background-color: $light-gray;
+        width: clamp(36px, 2.5vw, 96px);
+        height: clamp(36px, 2.5vw, 96px);
+        border-radius: 50%;
+        float: left;
+        transition: $transition;
+        font-family: $font-primary;
+        font-size: clamp(14px, 0.833vw, 32px);
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: -0.62px;
+
+        svg {
+          width: clamp(17px, 1.042vw, 32px);
+          height: clamp(17px, 1.042vw, 32px);
+
+          path {
+            stroke: $white;
+            transition: $transition;
+          }
+        }
+
+        &.active {
+          background-color: $accent-1;
+        }
+
+        &:hover {
+          background-color: $accent-1;
+        }
+      }
+
+      &:hover {
+        span {
+          color: $white;
+          transition: $transition;
+        }
+      }
+    }
+  }
+}
