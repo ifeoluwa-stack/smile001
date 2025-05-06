@@ -1,6 +1,7 @@
 .logo{
     display: flex;
     margin: 8%;
+    margin-left: 20%;
     margin-bottom: 0;
     font: bold;
     font-family: "Montserrat", sans-serif; ;
@@ -12,13 +13,15 @@
 .logotext{
     margin-right: auto;
     display: flex;
+    
     font-weight: bolder;
     font-size: larger;
     font-size: clamp(27px, 3.902vw, 38px);
 }
 .logincontainer{
     align-items: center;
-    margin-left: 8%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .input{
  cursor: pointer;
@@ -27,16 +30,15 @@ outline: none;
 padding: 12px;
 border-radius: 15px;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-width: 60%;
+width: 100%;
 font-size: 16px;
 }
 .checkbox-container{
     align-items:center;
-    margin:5%;
-    margin-left: 9%;
+    margin-left: 25%;
     color:rgb(101, 98, 98);
     display: flex;
-    gap: 10%;
+    gap: 5%;
   
 }
 .rememberme{
@@ -46,12 +48,18 @@ font-size: 16px;
 .bt{
 color: white;
 background-color: #456B61;
-  padding: 10px 20px;
-  margin-left: 10%;
+  padding: 10px 10px;
+  margin-left: 25%;
   border: none;
   width: 300px;
   height: 50px;
   cursor: pointer;
+  margin-top: 30px;
   border-radius: 25px;
   font-weight: bolder;
+}
+body{
+    justify-items: center;
+    
+    
 }

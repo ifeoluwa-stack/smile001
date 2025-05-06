@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGNUP PAGE</title>
     <link rel="stylesheet" href="signup.css">
+    
 </head>
 <body>
     <div>
@@ -32,13 +33,17 @@
                     </h3>
                 <input class="input" type="password" placeholder="input password" required >
                 </form>
-          </div>
+          </div> 
+          <button  class="bt" style=" "><a href="homepage.html" style="text-decoration: none; color: white; ">SIGN UP</a></button>
+
              <div class="checkbox-container">
                 <label for="rememberMe">
                   <input  type="checkbox" id="rememberMe" /> Remember me
                 </label> 
                 <h2 ><a href="" style="text-decoration: none; color:#456B61 ; font-weight:bold ;" >forget password</a></h2>
-              </div><script src="middleware.js"></script>  <!-- External JS file linked here -->
+              </div>
+              <h3 style="margin-left: 27%; margin-bottom: 3%;  color: gray;"> Already a member<a href="/felicitious 2/index.html" style="text-decoration: none; color: #456B61;"> Login</a></h3>
+              <script src="middleware.js"></script>  <!-- External JS file linked here -->
         
               <script>
                   document.getElementById("loginForm").addEventListener("submit", function(event) {
@@ -52,7 +57,7 @@
                   checkAuthentication();
               </script>
         
-              <button  class="bt" style=" "><a href="homepage.html" style="text-decoration: none; color: white; ">SIGN UP</a></button>
+             
         </div>
 
     </div>
